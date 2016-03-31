@@ -28,38 +28,17 @@ import javax.swing.JOptionPane;
 public class Ventana extends javax.swing.JFrame implements ActionListener{
 
    DB db;
-    DBCollection coleccion;
-    
-    DBCollection academica;
-    DBCollection almacen;
-    DBCollection beneficiario;
-    DBCollection beneficiario_responsable;
-    DBCollection beneficiario_programas;
-    DBCollection deposito;
-    DBCollection dias;
-    DBCollection escuela;
-    DBCollection libro;
-    DBCollection patrocinador;
-    DBCollection prestamos;
-    DBCollection prestador_servicio;
-    DBCollection producto;
-    DBCollection programa;
-    DBCollection responsable;
-    DBCollection registro_horas;
-    DBCollection taller;
-    DBCollection taller_dias;
-    DBCollection taller_beneficiario;
-    DBCollection tipo_usuario;
-    DBCollection tipo_taller;
-    DBCollection usuario;
+   DBCollection coleccion;
+   int bandera_eli_act;
+   
     
     public Ventana() 
     {
         
         this.setTitle("Mexico SIN Hambre");
         initComponents();
-        
-         this.getContentPane().setBackground(Color.LIGHT_GRAY);
+        this.getContentPane().setBackground(Color.LIGHT_GRAY);
+        this.setBounds(0, 0, 345, 63);
         
         add_to_ActionListenner();
         make_lab_and_text_invisible();
@@ -963,10 +942,20 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
      
              document.put("Id",texto);
 
-             coleccion.remove(document);
+             if(bandera_eli_act==1)
+             {
+                coleccion.remove(document);
+             
+                setSize(345,63);
 
-             JOptionPane.showMessageDialog(null, "Documento con ID: "+texto+" ha sido eliminado");
-
+                JOptionPane.showMessageDialog(null, "Documento con ID: "+texto+" ha sido eliminado");
+ 
+             }
+             else
+             {
+                 
+             }
+             
             }
         
     
@@ -1044,11 +1033,11 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     public void choose_function(Object source)
     {
        if(source==jMenuItem1 || source==jMenuItem2 || source==jMenuItem3 || source==jMenuItem4|| source==jMenuItem5 || source==jMenuItem6 || source==jMenuItem7|| source==jMenuItem8 || source==jMenuItem9 || source==jMenuItem10)
-           insertar();
+           insertar(source);
        else if(source==jMenuItem11 || source==jMenuItem12 || source==jMenuItem13 || source==jMenuItem14|| source==jMenuItem15 || source==jMenuItem16 || source==jMenuItem17|| source==jMenuItem18 || source==jMenuItem19 || source==jMenuItem20)
-              insertar();
+              insertar(source);
             else if(source==jMenuItem21 || source==jMenuItem22 || source==jMenuItem23 || source==jMenuItem24|| source==jMenuItem25 || source==jMenuItem26 || source==jMenuItem27|| source==jMenuItem28 || source==jMenuItem29 || source==jMenuItem30)
-                    insertar();
+                    insertar(source);
                  else if(source==jMenuItem31 || source==jMenuItem32 || source==jMenuItem33 || source==jMenuItem34|| source==jMenuItem35 || source==jMenuItem36 || source==jMenuItem37|| source==jMenuItem38 || source==jMenuItem39 || source==jMenuItem40)
                         eliminar();
                       else if(source==jMenuItem41 || source==jMenuItem42 || source==jMenuItem43 || source==jMenuItem44|| source==jMenuItem45 || source==jMenuItem46 || source==jMenuItem47|| source==jMenuItem48 || source==jMenuItem49 || source==jMenuItem50)
@@ -1056,11 +1045,11 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                             else if(source==jMenuItem51 || source==jMenuItem52 || source==jMenuItem53 || source==jMenuItem54|| source==jMenuItem55 || source==jMenuItem56 || source==jMenuItem57|| source==jMenuItem58 || source==jMenuItem59 || source==jMenuItem60)
                                      eliminar();
                                  else if(source==jMenuItem61 || source==jMenuItem62 || source==jMenuItem63 || source==jMenuItem64|| source==jMenuItem65 || source==jMenuItem66 || source==jMenuItem67|| source==jMenuItem68 || source==jMenuItem69 || source==jMenuItem70)
-                                         actualizar();
+                                         actualizar(source);
                                       else if(source==jMenuItem71 || source==jMenuItem72 || source==jMenuItem73 || source==jMenuItem74|| source==jMenuItem75 || source==jMenuItem76 || source==jMenuItem77|| source==jMenuItem78 || source==jMenuItem79 || source==jMenuItem80)
-                                                actualizar();
+                                                actualizar(source);
                                            else if(source==jMenuItem81 || source==jMenuItem82 || source==jMenuItem83 || source==jMenuItem84|| source==jMenuItem85 || source==jMenuItem86 || source==jMenuItem87|| source==jMenuItem88 || source==jMenuItem89 || source==jMenuItem90)
-                                                    actualizar();
+                                                    actualizar(source);
                                                 else if(source==jMenuItem91 || source==jMenuItem92 || source==jMenuItem93 || source==jMenuItem94|| source==jMenuItem95 || source==jMenuItem96 || source==jMenuItem97|| source==jMenuItem98 || source==jMenuItem99 || source==jMenuItem100)
                                                         consultar();
                                                      else if(source==jMenuItem101 || source==jMenuItem102 || source==jMenuItem103 || source==jMenuItem104|| source==jMenuItem105 || source==jMenuItem106 || source==jMenuItem107|| source==jMenuItem108 || source==jMenuItem109 || source==jMenuItem110)
@@ -1072,7 +1061,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     
     ////////////////////////////////////////////////////
     
-    public void insertar()
+    public void insertar(Object source)
     {
      JOptionPane.showMessageDialog(null, "insero");
     
@@ -1082,18 +1071,24 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     
     public void eliminar()
     {
-     jTextField1.setVisible(true);
-     jLabel1.setVisible(true);
-     jButton1.setVisible(true);
+     this.setSize( 345, 170); 
+        
      
      
+     bandera_eli_act=1;
     }
     
     ////////////////////////////////////////////////////
     
-    public void actualizar()
+    public void actualizar(Object source)
     {
-     JOptionPane.showMessageDialog(null, "ac");
+     this.setSize( 345, 170); 
+        
+     
+     
+     bandera_eli_act=2;
+     
+     recognize_fields();
     
     }
     
@@ -1114,7 +1109,13 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         }
     
     }
+    ///////////////////////////////////////////////////
     
+    public void recognize_fields()
+    {
+        
+    }
+            
     ///////////////////////////////////////////////////
     
     public void add_to_ActionListenner()
@@ -1259,7 +1260,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     
     public void make_lab_and_text_invisible()
     {
-     jLabel1.setVisible(false);
+     jLabel1.setVisible(true);
       jLabel2.setVisible(false);
        jLabel3.setVisible(false);
         jLabel4.setVisible(false);
@@ -1271,7 +1272,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
               jLabel10.setVisible(false);
                jLabel11.setVisible(false);
     
-        jTextField1.setVisible(false);
+        jTextField1.setVisible(true);
           jTextField2.setVisible(false);
            jTextField3.setVisible(false);
             jTextField4.setVisible(false);
@@ -1284,7 +1285,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                    jTextField11.setVisible(false);
     
                   
-                   jButton1.setVisible(false);
+                  
     
     
     
