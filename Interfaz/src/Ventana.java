@@ -1,4 +1,9 @@
 
+/*  NOTAS DE MEJORIA: 
+        °ARRANCAR MONGODB AL EJECUTARSE LA INTERFAZ
+        °MOSTRAR CONSULAS DENTRO DE CAMPOS DEFINIDOS
+        °OPTIMIZAR FUNCION ACTUALIZAR CON SITEMA DE 2 BOTONES QUE MUESTRE LOS DATOS ACTUALES EN LOS CAMPOS
+*/
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -1056,6 +1061,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                                      setSize(345,51);
                                      JOptionPane.showMessageDialog(null, "Documento(s) con ID: "+casilla_id+" ha sido ELIMINADO");
                                      setSize(345,51);
+                                     consultar();
                                     }
                 
                 
