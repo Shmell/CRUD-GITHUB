@@ -13,7 +13,9 @@ import java.net.UnknownHostException;
 import java.text.Normalizer.Form;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -35,10 +37,41 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     public Ventana() 
     {
         
+        
         this.setTitle("Mexico SIN Hambre");
         initComponents();
-        this.getContentPane().setBackground(Color.LIGHT_GRAY);
-        this.setBounds(0, 0, 345, 63);
+        this.getContentPane().setBackground(Color.WHITE);
+        this.setBounds(0, 0, 345, 51);
+        setResizable(false);
+        
+         fields[0]=jLabel1;
+         fields[1]=jLabel2;
+         fields[2]=jLabel3;
+         fields[3]=jLabel4;
+         fields[4]=jLabel5;
+         fields[5]=jLabel6;
+         fields[6]=jLabel7;
+         fields[7]=jLabel8;
+         fields[8]=jLabel9;
+         fields[9]=jLabel10;
+         fields[10]=jLabel11;
+         fields[11]=jLabel12;
+                  
+         texts[0]=jTextField1;
+         texts[1]=jTextField2;
+         texts[2]=jTextField3;
+         texts[3]=jTextField4;
+         texts[4]=jTextField5;
+         texts[5]=jTextField6;
+         texts[6]=jTextField7;
+         texts[7]=jTextField8;
+         texts[8]=jTextField9;
+         texts[9]=jTextField10;
+         texts[10]=jTextField11;
+         texts[11]=jTextField12;
+            
+        
+        
         
         add_to_ActionListenner();
         make_lab_and_text_invisible();
@@ -109,7 +142,12 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        doit = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -254,30 +292,41 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setText("Id");
 
+        jLabel2.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel2.setText("jLabel2");
 
+        jLabel3.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel3.setText("jLabel3");
 
+        jLabel4.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel4.setText("jLabel4");
 
+        jLabel5.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel5.setText("jLabel5");
 
+        jLabel6.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel6.setText("jLabel6");
 
+        jLabel7.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel7.setText("jLabel7");
 
+        jLabel8.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel8.setText("jLabel8");
 
+        jLabel9.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel9.setText("jLabel9");
 
+        jLabel10.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel10.setText("jLabel10");
 
+        jLabel11.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
         jLabel11.setText("jLabel11");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -286,12 +335,55 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
             }
         });
 
-        jButton1.setText("Do it!");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        doit.setText("Do it!");
+        doit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                doitActionPerformed(evt);
             }
         });
+
+        jLabel12.setFont(new java.awt.Font("Constantia", 1, 14)); // NOI18N
+        jLabel12.setText("jLabel12");
+
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel13.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("jLabel13");
+
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel14.setText("jLabel13");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel14)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        jMenuBar1.setBackground(new java.awt.Color(255, 51, 51));
+        jMenuBar1.setForeground(new java.awt.Color(102, 102, 255));
 
         jMenu1.setText("Insertar");
 
@@ -396,13 +488,13 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         jMenuItem27.setText("Usuario Permisos");
         jMenu1.add(jMenuItem27);
 
-        jMenuItem28.setText("jMenuItem1");
+        jMenuItem28.setText("Ciclo Escolar");
         jMenu1.add(jMenuItem28);
 
-        jMenuItem29.setText("Ciclo Escolar");
+        jMenuItem29.setText("Genero");
         jMenu1.add(jMenuItem29);
 
-        jMenuItem30.setText("jMenuItem1");
+        jMenuItem30.setText("Grado Escolar");
         jMenu1.add(jMenuItem30);
 
         jMenuBar1.add(jMenu1);
@@ -510,13 +602,13 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         jMenuItem57.setText("Usuario Permisos");
         jMenu2.add(jMenuItem57);
 
-        jMenuItem58.setText("jMenuItem1");
+        jMenuItem58.setText("Ciclo Escolar");
         jMenu2.add(jMenuItem58);
 
-        jMenuItem59.setText("Ciclo Escolar");
+        jMenuItem59.setText("Genero");
         jMenu2.add(jMenuItem59);
 
-        jMenuItem60.setText("jMenuItem1");
+        jMenuItem60.setText("Grado Escolar");
         jMenu2.add(jMenuItem60);
 
         jMenuBar1.add(jMenu2);
@@ -624,13 +716,13 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         jMenuItem87.setText("Usuario Permisos");
         jMenu3.add(jMenuItem87);
 
-        jMenuItem88.setText("jMenuItem1");
+        jMenuItem88.setText("Ciclo Escolar");
         jMenu3.add(jMenuItem88);
 
-        jMenuItem89.setText("Ciclo Escolar");
+        jMenuItem89.setText("Genero");
         jMenu3.add(jMenuItem89);
 
-        jMenuItem90.setText("jMenuItem1");
+        jMenuItem90.setText("Grado Escolar");
         jMenu3.add(jMenuItem90);
 
         jMenuBar1.add(jMenu3);
@@ -738,13 +830,13 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         jMenuItem117.setText("Usuario Permisos");
         jMenu4.add(jMenuItem117);
 
-        jMenuItem118.setText("jMenuItem1");
+        jMenuItem118.setText("Ciclo Escolar");
         jMenu4.add(jMenuItem118);
 
-        jMenuItem119.setText("Ciclo Escolar");
+        jMenuItem119.setText("Genero");
         jMenu4.add(jMenuItem119);
 
-        jMenuItem120.setText("jMenuItem1");
+        jMenuItem120.setText("Grado Escolar");
         jMenu4.add(jMenuItem120);
 
         jMenuBar1.add(jMenu4);
@@ -759,62 +851,55 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(doit)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(doit))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -855,7 +940,11 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
@@ -930,36 +1019,89 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void doitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doitActionPerformed
         
-        String texto=jTextField1.getText();
+        String casilla_id=jTextField1.getText();
         
-        if(texto.isEmpty())
-            JOptionPane.showMessageDialog(null, "No hay datos en la casilla");
-        else
-            {
-             BasicDBObject document=new BasicDBObject();
-     
-             document.put("Id",texto);
+        switch(funcion)
+        {
+            case INSERTAR:   
+                        if(casilla_id.isEmpty())
+                            JOptionPane.showMessageDialog(null, "No hay datos en la casilla ID");
+                        else
+                            {
+                             BasicDBObject document=new BasicDBObject();
 
-             if(bandera_eli_act==1)
-             {
-                coleccion.remove(document);
-             
+                             for(int i=0;;i++)
+                                {
+                                 if(fields[i].isVisible()==true)   
+                                    document.put(fields[i].getText(),texts[i].getText());
+                                 else
+                                     break;
+                                }
+                             
+                             coleccion.insert(document);
+                             
+                             setSize(345,51);
+                             JOptionPane.showMessageDialog(null, "Documento con ID: "+casilla_id+" ha sido INSERTADO");
+                            }   
+            ;break;
+            
+            case ELIMINAR:  
+                                if(casilla_id.isEmpty())
+                                    JOptionPane.showMessageDialog(null, "No hay datos en la casilla ID");
+                                else
+                                    {
+                                     BasicDBObject document=new BasicDBObject();
+                                     
+                                     document.put(jLabel1.getText(),casilla_id);
+                                     coleccion.remove(document);
+                                     
+                                     setSize(345,51);
+                                     JOptionPane.showMessageDialog(null, "Documento con ID: "+casilla_id+" ha sido INSERTADO");
+                                    }
+                
                 setSize(345,63);
 
-                JOptionPane.showMessageDialog(null, "Documento con ID: "+texto+" ha sido eliminado");
- 
-             }
-             else
-             {
-                 
-             }
+                
+                
+                
+                ;break;
+                
+            case ACTUALIZAR:   
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                ;break;
+        
+        
+        
+        
+        
+        
+        }
+        
+        
+        
+        
+        
+        
              
-            }
+
+             
         
     
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_doitActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
 
    
     ////////////////////////////////////////////////////////////////
@@ -1025,6 +1167,8 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
            coleccion=db.getCollection("Genero");
        if(source==jMenuItem30 || source==jMenuItem60 || source==jMenuItem90 || source==jMenuItem120)
            coleccion=db.getCollection("Grados_escolares");
+       
+       jLabel14.setText(coleccion.getName());
     }
     
     
@@ -1039,11 +1183,11 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
             else if(source==jMenuItem21 || source==jMenuItem22 || source==jMenuItem23 || source==jMenuItem24|| source==jMenuItem25 || source==jMenuItem26 || source==jMenuItem27|| source==jMenuItem28 || source==jMenuItem29 || source==jMenuItem30)
                     insertar(source);
                  else if(source==jMenuItem31 || source==jMenuItem32 || source==jMenuItem33 || source==jMenuItem34|| source==jMenuItem35 || source==jMenuItem36 || source==jMenuItem37|| source==jMenuItem38 || source==jMenuItem39 || source==jMenuItem40)
-                        eliminar();
+                        eliminar(source);
                       else if(source==jMenuItem41 || source==jMenuItem42 || source==jMenuItem43 || source==jMenuItem44|| source==jMenuItem45 || source==jMenuItem46 || source==jMenuItem47|| source==jMenuItem48 || source==jMenuItem49 || source==jMenuItem50)
-                              eliminar();
+                              eliminar(source);
                             else if(source==jMenuItem51 || source==jMenuItem52 || source==jMenuItem53 || source==jMenuItem54|| source==jMenuItem55 || source==jMenuItem56 || source==jMenuItem57|| source==jMenuItem58 || source==jMenuItem59 || source==jMenuItem60)
-                                     eliminar();
+                                     eliminar(source);
                                  else if(source==jMenuItem61 || source==jMenuItem62 || source==jMenuItem63 || source==jMenuItem64|| source==jMenuItem65 || source==jMenuItem66 || source==jMenuItem67|| source==jMenuItem68 || source==jMenuItem69 || source==jMenuItem70)
                                          actualizar(source);
                                       else if(source==jMenuItem71 || source==jMenuItem72 || source==jMenuItem73 || source==jMenuItem74|| source==jMenuItem75 || source==jMenuItem76 || source==jMenuItem77|| source==jMenuItem78 || source==jMenuItem79 || source==jMenuItem80)
@@ -1063,32 +1207,245 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     
     public void insertar(Object source)
     {
-     JOptionPane.showMessageDialog(null, "insero");
-    
+     this.setSize(460, 650); 
+     make_lab_and_text_invisible();
+        setResizable(false);
+     
+    int op=this.INSERTAR;
+     
+     if(source==jMenuItem1 || source==jMenuItem31 || source==jMenuItem61 || source==jMenuItem91)
+         recognize_fields(op,beneficiarios); 
+       if(source==jMenuItem2 || source==jMenuItem32 || source==jMenuItem62 || source==jMenuItem92)
+          recognize_fields(op,beneficiario_academica); 
+       if(source==jMenuItem3 || source==jMenuItem33 || source==jMenuItem63 || source==jMenuItem93)
+           recognize_fields(op,beneficiario_programa ); 
+       if(source==jMenuItem4 || source==jMenuItem34 || source==jMenuItem64 || source==jMenuItem94)
+           recognize_fields(op,beneficiario_responsable ); 
+       if(source==jMenuItem5 || source==jMenuItem35 || source==jMenuItem65 || source==jMenuItem95)
+           recognize_fields(op,dia ); 
+       if(source==jMenuItem6 || source==jMenuItem36 || source==jMenuItem66 || source==jMenuItem96)
+           recognize_fields(op,escuela ); 
+       if(source==jMenuItem7 || source==jMenuItem37 || source==jMenuItem67 || source==jMenuItem97)
+           recognize_fields(op,estatus ); 
+       if(source==jMenuItem8 || source==jMenuItem38 || source==jMenuItem68 || source==jMenuItem98)
+           recognize_fields(op,grados ); 
+       if(source==jMenuItem9 || source==jMenuItem39 || source==jMenuItem69 || source==jMenuItem99)
+           recognize_fields(op,libro ); 
+       if(source==jMenuItem10 || source==jMenuItem40 || source==jMenuItem70 || source==jMenuItem100)
+           recognize_fields(op,libro_prestamo ); 
+       if(source==jMenuItem11 || source==jMenuItem41 || source==jMenuItem71 || source==jMenuItem101)
+           recognize_fields(op,parentesco ); 
+       if(source==jMenuItem12 || source==jMenuItem42 || source==jMenuItem72 || source==jMenuItem102)
+           recognize_fields(op,patrocinador ); 
+       if(source==jMenuItem13 || source==jMenuItem43 || source==jMenuItem73 || source==jMenuItem103)
+           recognize_fields(op,patrocinador_deposito ); 
+       if(source==jMenuItem14 || source==jMenuItem44 || source==jMenuItem74 || source==jMenuItem104)
+           recognize_fields(op,patrocinador_programa ); 
+       if(source==jMenuItem15 || source==jMenuItem45 || source==jMenuItem75 || source==jMenuItem105)
+           recognize_fields(op,prestador ); 
+       if(source==jMenuItem16 || source==jMenuItem46 || source==jMenuItem76 || source==jMenuItem106)
+           recognize_fields(op,producto ); 
+       if(source==jMenuItem17 || source==jMenuItem47 || source==jMenuItem77 || source==jMenuItem107)
+           recognize_fields(op,producto_almacen ); 
+       if(source==jMenuItem18 || source==jMenuItem48 || source==jMenuItem78 || source==jMenuItem108)
+           recognize_fields(op,programa ); 
+       if(source==jMenuItem19 || source==jMenuItem49 || source==jMenuItem79 || source==jMenuItem109)
+           recognize_fields(op,responsable ); 
+       if(source==jMenuItem20 || source==jMenuItem50 || source==jMenuItem80 || source==jMenuItem110)
+           recognize_fields(op,taller ); 
+       if(source==jMenuItem21 || source==jMenuItem51 || source==jMenuItem81 || source==jMenuItem111)
+           recognize_fields(op,taller_beneficiario ); 
+       if(source==jMenuItem22 || source==jMenuItem52 || source==jMenuItem82 || source==jMenuItem112)
+           recognize_fields(op,taller_tipo ); 
+       if(source==jMenuItem23 || source==jMenuItem53 || source==jMenuItem83 || source==jMenuItem113)
+           recognize_fields(op,taller_dias ); 
+       if(source==jMenuItem24 || source==jMenuItem54 || source==jMenuItem84 || source==jMenuItem114)
+           recognize_fields(op,tipo_deposito ); 
+       if(source==jMenuItem25 || source==jMenuItem55 || source==jMenuItem85 || source==jMenuItem115)
+           recognize_fields(op,turno ); 
+       if(source==jMenuItem26 || source==jMenuItem56 || source==jMenuItem86 || source==jMenuItem116)
+           recognize_fields(op,usuario ); 
+       if(source==jMenuItem27 || source==jMenuItem57 || source==jMenuItem87 || source==jMenuItem117)
+           recognize_fields(op,usuario_permisos ); 
+       if(source==jMenuItem28 || source==jMenuItem58 || source==jMenuItem88 || source==jMenuItem118)
+           recognize_fields(op,ciclo_escolar ); 
+       if(source==jMenuItem29 || source==jMenuItem59 || source==jMenuItem89 || source==jMenuItem119)
+           recognize_fields(op,genero ); 
+       if(source==jMenuItem30 || source==jMenuItem60 || source==jMenuItem90 || source==jMenuItem120)
+           recognize_fields(op,grado_escolar ); 
+       
+       
+       funcion=this.INSERTAR;
+      jLabel13.setText("INSERTAR");
+       
+     
+     
+     
+     
+     
+     
+     
+     
+     
     }
     
     ////////////////////////////////////////////////////
     
-    public void eliminar()
+    public void eliminar(Object source)
     {
-     this.setSize( 345, 170); 
-        
+     this.setSize( 460, 210); 
+        make_lab_and_text_invisible();
+     setResizable(false);
+     
+     int op=this.ELIMINAR;
+     
+     if(source==jMenuItem1 || source==jMenuItem31 || source==jMenuItem61 || source==jMenuItem91)
+         recognize_fields(op,beneficiarios); 
+       if(source==jMenuItem2 || source==jMenuItem32 || source==jMenuItem62 || source==jMenuItem92)
+          recognize_fields(op,beneficiario_academica); 
+       if(source==jMenuItem3 || source==jMenuItem33 || source==jMenuItem63 || source==jMenuItem93)
+           recognize_fields(op,beneficiario_programa ); 
+       if(source==jMenuItem4 || source==jMenuItem34 || source==jMenuItem64 || source==jMenuItem94)
+           recognize_fields(op,beneficiario_responsable ); 
+       if(source==jMenuItem5 || source==jMenuItem35 || source==jMenuItem65 || source==jMenuItem95)
+           recognize_fields(op,dia ); 
+       if(source==jMenuItem6 || source==jMenuItem36 || source==jMenuItem66 || source==jMenuItem96)
+           recognize_fields(op,escuela ); 
+       if(source==jMenuItem7 || source==jMenuItem37 || source==jMenuItem67 || source==jMenuItem97)
+           recognize_fields(op,estatus ); 
+       if(source==jMenuItem8 || source==jMenuItem38 || source==jMenuItem68 || source==jMenuItem98)
+           recognize_fields(op,grados ); 
+       if(source==jMenuItem9 || source==jMenuItem39 || source==jMenuItem69 || source==jMenuItem99)
+           recognize_fields(op,libro ); 
+       if(source==jMenuItem10 || source==jMenuItem40 || source==jMenuItem70 || source==jMenuItem100)
+           recognize_fields(op,libro_prestamo ); 
+       if(source==jMenuItem11 || source==jMenuItem41 || source==jMenuItem71 || source==jMenuItem101)
+           recognize_fields(op,parentesco ); 
+       if(source==jMenuItem12 || source==jMenuItem42 || source==jMenuItem72 || source==jMenuItem102)
+           recognize_fields(op,patrocinador ); 
+       if(source==jMenuItem13 || source==jMenuItem43 || source==jMenuItem73 || source==jMenuItem103)
+           recognize_fields(op,patrocinador_deposito ); 
+       if(source==jMenuItem14 || source==jMenuItem44 || source==jMenuItem74 || source==jMenuItem104)
+           recognize_fields(op,patrocinador_programa ); 
+       if(source==jMenuItem15 || source==jMenuItem45 || source==jMenuItem75 || source==jMenuItem105)
+           recognize_fields(op,prestador ); 
+       if(source==jMenuItem16 || source==jMenuItem46 || source==jMenuItem76 || source==jMenuItem106)
+           recognize_fields(op,producto ); 
+       if(source==jMenuItem17 || source==jMenuItem47 || source==jMenuItem77 || source==jMenuItem107)
+           recognize_fields(op,producto_almacen ); 
+       if(source==jMenuItem18 || source==jMenuItem48 || source==jMenuItem78 || source==jMenuItem108)
+           recognize_fields(op,programa ); 
+       if(source==jMenuItem19 || source==jMenuItem49 || source==jMenuItem79 || source==jMenuItem109)
+           recognize_fields(op,responsable ); 
+       if(source==jMenuItem20 || source==jMenuItem50 || source==jMenuItem80 || source==jMenuItem110)
+           recognize_fields(op,taller ); 
+       if(source==jMenuItem21 || source==jMenuItem51 || source==jMenuItem81 || source==jMenuItem111)
+           recognize_fields(op,taller_beneficiario ); 
+       if(source==jMenuItem22 || source==jMenuItem52 || source==jMenuItem82 || source==jMenuItem112)
+           recognize_fields(op,taller_tipo ); 
+       if(source==jMenuItem23 || source==jMenuItem53 || source==jMenuItem83 || source==jMenuItem113)
+           recognize_fields(op,taller_dias ); 
+       if(source==jMenuItem24 || source==jMenuItem54 || source==jMenuItem84 || source==jMenuItem114)
+           recognize_fields(op,tipo_deposito ); 
+       if(source==jMenuItem25 || source==jMenuItem55 || source==jMenuItem85 || source==jMenuItem115)
+           recognize_fields(op,turno ); 
+       if(source==jMenuItem26 || source==jMenuItem56 || source==jMenuItem86 || source==jMenuItem116)
+           recognize_fields(op,usuario ); 
+       if(source==jMenuItem27 || source==jMenuItem57 || source==jMenuItem87 || source==jMenuItem117)
+           recognize_fields(op,usuario_permisos ); 
+       if(source==jMenuItem28 || source==jMenuItem58 || source==jMenuItem88 || source==jMenuItem118)
+           recognize_fields(op,ciclo_escolar ); 
+       if(source==jMenuItem29 || source==jMenuItem59 || source==jMenuItem89 || source==jMenuItem119)
+           recognize_fields(op,genero ); 
+       if(source==jMenuItem30 || source==jMenuItem60 || source==jMenuItem90 || source==jMenuItem120)
+           recognize_fields(op,grado_escolar );
      
      
-     bandera_eli_act=1;
+     
+     
+     
+     
+     funcion=this.ELIMINAR;
+     jLabel13.setText("ELIMINAR");
     }
     
     ////////////////////////////////////////////////////
     
     public void actualizar(Object source)
     {
-     this.setSize( 345, 170); 
-        
+     this.setSize( 460, 650); 
+        make_lab_and_text_invisible();
+     setResizable(false);
+     
+     int op=this.ACTUALIZAR;
+     
+     if(source==jMenuItem1 || source==jMenuItem31 || source==jMenuItem61 || source==jMenuItem91)
+         recognize_fields(op,beneficiarios); 
+       if(source==jMenuItem2 || source==jMenuItem32 || source==jMenuItem62 || source==jMenuItem92)
+          recognize_fields(op,beneficiario_academica); 
+       if(source==jMenuItem3 || source==jMenuItem33 || source==jMenuItem63 || source==jMenuItem93)
+           recognize_fields(op,beneficiario_programa ); 
+       if(source==jMenuItem4 || source==jMenuItem34 || source==jMenuItem64 || source==jMenuItem94)
+           recognize_fields(op,beneficiario_responsable ); 
+       if(source==jMenuItem5 || source==jMenuItem35 || source==jMenuItem65 || source==jMenuItem95)
+           recognize_fields(op,dia ); 
+       if(source==jMenuItem6 || source==jMenuItem36 || source==jMenuItem66 || source==jMenuItem96)
+           recognize_fields(op,escuela ); 
+       if(source==jMenuItem7 || source==jMenuItem37 || source==jMenuItem67 || source==jMenuItem97)
+           recognize_fields(op,estatus ); 
+       if(source==jMenuItem8 || source==jMenuItem38 || source==jMenuItem68 || source==jMenuItem98)
+           recognize_fields(op,grados ); 
+       if(source==jMenuItem9 || source==jMenuItem39 || source==jMenuItem69 || source==jMenuItem99)
+           recognize_fields(op,libro ); 
+       if(source==jMenuItem10 || source==jMenuItem40 || source==jMenuItem70 || source==jMenuItem100)
+           recognize_fields(op,libro_prestamo ); 
+       if(source==jMenuItem11 || source==jMenuItem41 || source==jMenuItem71 || source==jMenuItem101)
+           recognize_fields(op,parentesco ); 
+       if(source==jMenuItem12 || source==jMenuItem42 || source==jMenuItem72 || source==jMenuItem102)
+           recognize_fields(op,patrocinador ); 
+       if(source==jMenuItem13 || source==jMenuItem43 || source==jMenuItem73 || source==jMenuItem103)
+           recognize_fields(op,patrocinador_deposito ); 
+       if(source==jMenuItem14 || source==jMenuItem44 || source==jMenuItem74 || source==jMenuItem104)
+           recognize_fields(op,patrocinador_programa ); 
+       if(source==jMenuItem15 || source==jMenuItem45 || source==jMenuItem75 || source==jMenuItem105)
+           recognize_fields(op,prestador ); 
+       if(source==jMenuItem16 || source==jMenuItem46 || source==jMenuItem76 || source==jMenuItem106)
+           recognize_fields(op,producto ); 
+       if(source==jMenuItem17 || source==jMenuItem47 || source==jMenuItem77 || source==jMenuItem107)
+           recognize_fields(op,producto_almacen ); 
+       if(source==jMenuItem18 || source==jMenuItem48 || source==jMenuItem78 || source==jMenuItem108)
+           recognize_fields(op,programa ); 
+       if(source==jMenuItem19 || source==jMenuItem49 || source==jMenuItem79 || source==jMenuItem109)
+           recognize_fields(op,responsable ); 
+       if(source==jMenuItem20 || source==jMenuItem50 || source==jMenuItem80 || source==jMenuItem110)
+           recognize_fields(op,taller ); 
+       if(source==jMenuItem21 || source==jMenuItem51 || source==jMenuItem81 || source==jMenuItem111)
+           recognize_fields(op,taller_beneficiario ); 
+       if(source==jMenuItem22 || source==jMenuItem52 || source==jMenuItem82 || source==jMenuItem112)
+           recognize_fields(op,taller_tipo ); 
+       if(source==jMenuItem23 || source==jMenuItem53 || source==jMenuItem83 || source==jMenuItem113)
+           recognize_fields(op,taller_dias ); 
+       if(source==jMenuItem24 || source==jMenuItem54 || source==jMenuItem84 || source==jMenuItem114)
+           recognize_fields(op,tipo_deposito ); 
+       if(source==jMenuItem25 || source==jMenuItem55 || source==jMenuItem85 || source==jMenuItem115)
+           recognize_fields(op,turno ); 
+       if(source==jMenuItem26 || source==jMenuItem56 || source==jMenuItem86 || source==jMenuItem116)
+           recognize_fields(op,usuario ); 
+       if(source==jMenuItem27 || source==jMenuItem57 || source==jMenuItem87 || source==jMenuItem117)
+           recognize_fields(op,usuario_permisos ); 
+       if(source==jMenuItem28 || source==jMenuItem58 || source==jMenuItem88 || source==jMenuItem118)
+           recognize_fields(op,ciclo_escolar ); 
+       if(source==jMenuItem29 || source==jMenuItem59 || source==jMenuItem89 || source==jMenuItem119)
+           recognize_fields(op,genero ); 
+       if(source==jMenuItem30 || source==jMenuItem60 || source==jMenuItem90 || source==jMenuItem120)
+           recognize_fields(op,grado_escolar );
      
      
-     bandera_eli_act=2;
      
-     recognize_fields();
+     
+     funcion=this.ACTUALIZAR;
+     jLabel13.setText("ACTUALIZAR");
+     
     
     }
     
@@ -1099,7 +1456,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
      DBCursor cursor=coleccion.find();
         
         jFrame1.setVisible(true);
-        jFrame1.setBounds(363,0,950,500);
+        jFrame1.setBounds(463,0,850,650);
      
         jTextArea1.setText(" ");
         while(cursor.hasNext())
@@ -1111,9 +1468,56 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     }
     ///////////////////////////////////////////////////
     
-    public void recognize_fields()
+    public void recognize_fields(int funcion,String[] cam)
     {
         
+        switch(funcion)
+        {
+            case INSERTAR:
+                        for(int i=0;i<cam.length;i++)
+                            {
+                             fields[i].setVisible(true);
+                             fields[i].setText(cam[i]);
+
+                             texts[i].setVisible(true);
+                            }
+            ;break;
+            
+            case ELIMINAR:
+                        fields[0].setVisible(true);
+                        fields[0].setText(cam[0]);
+
+                        texts[0].setVisible(true);
+
+            ;break;
+            
+            case ACTUALIZAR:
+                        for(int i=0;i<cam.length;i++)
+                            {
+                             fields[i].setVisible(true);
+                             fields[i].setText(cam[i]);
+
+                             texts[i].setVisible(true);
+                             
+                             if(i!=0)
+                                 texts[i].setEnabled(false);
+                                 
+                            }
+            ;break;
+        
+        
+        
+        
+        }
+      
+         
+         
+      
+       
+       
+       
+       
+       
     }
             
     ///////////////////////////////////////////////////
@@ -1271,6 +1675,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
              jLabel9.setVisible(false);
               jLabel10.setVisible(false);
                jLabel11.setVisible(false);
+               jLabel12.setVisible(false);
     
         jTextField1.setVisible(true);
           jTextField2.setVisible(false);
@@ -1283,6 +1688,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                  jTextField9.setVisible(false);
                   jTextField10.setVisible(false);
                    jTextField11.setVisible(false);
+                   jTextField12.setVisible(false);
     
                   
                   
@@ -1327,11 +1733,14 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton doit;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1465,11 +1874,13 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JMenuItem jMenuItem97;
     private javax.swing.JMenuItem jMenuItem98;
     private javax.swing.JMenuItem jMenuItem99;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -1480,6 +1891,41 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-   
+    JLabel [] fields=new JLabel[12]; 
+    JTextField [] texts=new JTextField[12]; 
+    
+    String [] beneficiarios ={"beneficiario_id", "nombres","apPaterno", "apMaterno", "fechaNac", "calle", "numExt", "numInt", "teléfono", "sexo", "turno_id", "usuario_id" };
+    String [] beneficiario_academica ={"beneficiario_id", "ciclo_id", "escuela", "promedio", "grado_id"};
+    String [] beneficiario_programa ={ "beneficiario_id", "programa_id", "fechaInicio", "fechaFin", "patrocinador_id"};
+    String [] beneficiario_responsable ={ "beneficiario_id", "responsable_id", "parentesco_id"};
+    String [] dia ={ "dia_id", "dia"};
+    String [] escuela ={"escuela_id","escuela"};
+    String [] estatus ={"estatus_id","estatus"};
+    String [] grados ={"grado_id","grado"};
+    String [] libro  ={"libro_id", "titulo", "escritor" , "editorial", "genero_id"};
+    String [] libro_prestamo ={ "Beneficiario_id", "libro_id" , "fechaSalida" , "fechaDevo"};
+    String [] parentesco ={"parentesco_id","parentesco"};
+    String [] patrocinador ={"patrocinador", "nombres", "apPaterno", "sexo", "fechaNac", "teléfono", "email" , "ciudad", "estado" , "país" , "aportación_mensual"};
+    String [] patrocinador_deposito ={ "patrocinador_id", "fecha", "cantidad", "tipo_deposito_id"};
+    String [] patrocinador_programa ={"patrocinador_id", "fechaInicio" , "fechaFin"};
+    String [] prestador ={ "prestador_id", "nombres", "apPaterno", "apMaterno", "fechaNac", "email", "teléfono"  , "carrera", "fechaInicio"  , "fechaFin" , "escuela_id"};
+    String [] producto ={ "producto_id", "descripcion" , "minimo" };
+    String [] producto_almacen ={"producto_id" , "cantidad" , "fecha"  , "usuario_id"};
+    String [] programa ={ "programa_id" , "nombre" , "descripcion"};
+    String [] responsable ={"responsable_id", "nombres" , "apPaterno" , "apMaterno"  , "sexo"  , "fechaNac" , "teléfono" , "email"  , "oficio" , "grado"};
+    String [] taller ={"taller_id" , "nombre" , "tipoTaller_id"  , "hora"  , "prestador_id"  , "estatus_id"};
+    String [] taller_beneficiario ={ "taller_id"  , "beneficiario_id" , "ciclo_id" , "nivel"  , "prestador_ir"};
+    String [] taller_tipo ={ "Tipo_id" , "tipoTaller"};
+    String [] taller_dias ={"taller_id" , "dia_id"};
+    String [] tipo_deposito ={"Tipo_deposito_id" , "tipo_deposito" };
+    String [] turno ={"Tipo_id" , "turno"};
+    String [] usuario ={"usuario_id"  , "password" , "tipo_id"};
+    String [] usuario_permisos ={"tipo_id" , "tipo" , "escribir" , "editar", "eliminar"};
+    String [] ciclo_escolar ={ "ciclo_id" , "ciclo_escolar"};
+    String [] genero ={"genero_id" , "Genero" };
+    String [] grado_escolar ={"grado_id", "grado"};
+         
+   static final int INSERTAR=1,ELIMINAR=2,ACTUALIZAR=3;
+   int funcion;
     
 }
