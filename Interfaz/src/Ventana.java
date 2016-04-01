@@ -29,11 +29,7 @@ import javax.swing.JTextField;
  */
 public class Ventana extends javax.swing.JFrame implements ActionListener{
 
-   DB db;
-   DBCollection coleccion;
-   int bandera_eli_act;
    
-    
     public Ventana() 
     {
         
@@ -1903,6 +1899,10 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
+    
+    DB db;
+   DBCollection coleccion;
+    
     JLabel [] fields=new JLabel[12]; 
     JTextField [] texts=new JTextField[12]; 
     
