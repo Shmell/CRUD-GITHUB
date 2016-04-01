@@ -1058,10 +1058,11 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                                      coleccion.remove(document);
                                      
                                      setSize(345,51);
-                                     JOptionPane.showMessageDialog(null, "Documento con ID: "+casilla_id+" ha sido INSERTADO");
+                                     JOptionPane.showMessageDialog(null, "Documento(s) con ID: "+casilla_id+" ha sido ELIMINADO");
+                                     setSize(345,51);
                                     }
                 
-                setSize(345,63);
+                
 
                 
                 
@@ -1069,8 +1070,34 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
                 ;break;
                 
             case ACTUALIZAR:   
-                
-                
+                            if(casilla_id.isEmpty())
+                                                JOptionPane.showMessageDialog(null, "No hay datos en la casilla ID");
+                                            else
+                                                {
+                                                 BasicDBObject document_OLD=new BasicDBObject();
+                                                 BasicDBObject document_NEW=new BasicDBObject();
+
+                                                 document_OLD.put(jLabel1.getText(),casilla_id);
+                                                 document_NEW.put(jLabel1.getText(),casilla_id);
+                                                 
+                                                 for(int i=1;;i++)
+                                                    {
+                                                     if(fields[i].isVisible()==true)   
+                                                        document_NEW.put(fields[i].getText(),texts[i].getText());
+                                                     else
+                                                         break;
+                                                    }
+                                                 
+                                                 
+                                                 coleccion.update(document_OLD,document_NEW);
+
+                                                 setSize(345,51);
+                                                 JOptionPane.showMessageDialog(null, "Documento con ID: "+casilla_id+" ha sido ACTUALIZADO");
+                                                setSize(345,51);
+                                                consultar();
+                                                }
+
+                            
                 
                 
                 
@@ -1466,6 +1493,8 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
         }
     
     }
+    
+  
     ///////////////////////////////////////////////////
     
     public void recognize_fields(int funcion,String[] cam)
@@ -1499,8 +1528,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
 
                              texts[i].setVisible(true);
                              
-                             if(i!=0)
-                                 texts[i].setEnabled(false);
+                             
                                  
                             }
             ;break;
@@ -1665,37 +1693,21 @@ public class Ventana extends javax.swing.JFrame implements ActionListener{
     public void make_lab_and_text_invisible()
     {
      jLabel1.setVisible(true);
-      jLabel2.setVisible(false);
-       jLabel3.setVisible(false);
-        jLabel4.setVisible(false);
-         jLabel5.setVisible(false);
-          jLabel6.setVisible(false);
-           jLabel7.setVisible(false);
-            jLabel8.setVisible(false);
-             jLabel9.setVisible(false);
-              jLabel10.setVisible(false);
-               jLabel11.setVisible(false);
-               jLabel12.setVisible(false);
-    
-        jTextField1.setVisible(true);
-          jTextField2.setVisible(false);
-           jTextField3.setVisible(false);
-            jTextField4.setVisible(false);
-             jTextField5.setVisible(false);
-              jTextField6.setVisible(false);
-               jTextField7.setVisible(false);
-                jTextField8.setVisible(false);
-                 jTextField9.setVisible(false);
-                  jTextField10.setVisible(false);
-                   jTextField11.setVisible(false);
-                   jTextField12.setVisible(false);
-    
-                  
-                  
-    
-    
-    
-    
+        
+     for(int i=1;i<fields.length;i++)
+         fields[i].setVisible(false);
+     
+      
+      
+      jTextField1.setVisible(true);
+      jTextField1.setText("");
+        
+     for(int i=1;i<texts.length;i++)
+        {
+        texts[i].setVisible(false);
+        texts[i].setText("");
+        }
+
     }
     
     
